@@ -14,24 +14,43 @@ import java.util.List;
 public class MedicationRestController {
     @Autowired
     private MedicationService medicationService;
+
     @PostMapping("/save")
     public Medication saveMedication(@RequestBody Medication medication) {
         return medicationService.saveMedication(medication);
     }
+
     @GetMapping("/find/all")
     public List<Medication> fetchMedicationList() {
         return medicationService.fetchMedicationList();
     }
+
     @GetMapping("/find/patientid/{patient_id}")
     @PreAuthorize("hasRole('USER')")
     public List<Medication> findByPatientPatientId(@PathVariable("patient_id") Long patientid) {
         return medicationService.findByPatientPatientId(patientid);
     }
+
     @GetMapping("/find/medprofid/{medprof_id}")
     @PreAuthorize("hasRole('MODERATOR')")
     public List<Medication> findByMedicalProfessionalProfessionalId(@PathVariable("medprof_id") Long patientid) {
         return medicationService.findByMedicalProfessionalProfessionalId(patientid);
     }
+
+    @GetMapping("/find/{medprof_id}/{patient_id}/{appointment_id}")
+    @PreAuthorize("hasRole('MODERATOR')")
+    public List<Medication> findByProfessionalIdAndPatientIdAndAppointmentId(@PathVariable("medprof_id") Long medprofId,
+            @PathVariable("patient_id") Long patientId, @PathVariable("appointment_id") Long appointmentId) {
+        return medicationService.findByProfessionalIdAndPatientIdAndAppointmentId(medprofId, patientId, appointmentId);
+    }
+
+    @GetMapping("/find/{patient_id}/{appointment_id}")
+    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR')")
+    public List<Medication> findByPatientIdAndAppointmentId(@PathVariable("patient_id") Long patientId,
+            @PathVariable("appointment_id") Long appointmentId) {
+        return medicationService.findByPatientIdAndAppointmentId(patientId, appointmentId);
+    }
+
     @DeleteMapping("/delete/{id}")
     @PreAuthorize("hasRole('MODERATOR')")
     public String deleteMedicationById(@PathVariable("id") Long medicationId) {

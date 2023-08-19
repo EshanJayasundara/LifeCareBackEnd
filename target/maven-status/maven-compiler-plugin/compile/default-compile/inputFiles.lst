@@ -17,8 +17,10 @@ C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\payload\response\JwtResponse.java
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\service\MedicalProfessionalService.java
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\entity\Manager.java
+C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\models\SetNewUsernameEmailPswd.java
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\controllers\MedicalProfessionalRestController.java
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\repository\MedicalProfessionalRepository.java
+C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\controllers\UserRestController.java
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\payload\response\MessageResponse.java
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\controllers\AppointmentRestController.java
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\controllers\AuthController.java
@@ -32,6 +34,7 @@ C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\models\User.java
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\controllers\MedicationRestController.java
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\repository\UserRepository.java
+C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\security\jwt\CorsFilter.java
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\security\jwt\JwtUtils.java
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\security\WebSecurityConfig.java
 C:\Users\jmesh\OneDrive\Desktop\LifeCareBackEnd\src\main\java\com\MedicalClinic\LifeCare\service\PatientServiceImpl.java

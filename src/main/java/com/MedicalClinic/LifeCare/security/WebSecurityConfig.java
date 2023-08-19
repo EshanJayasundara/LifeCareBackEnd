@@ -2,7 +2,6 @@ package com.MedicalClinic.LifeCare.security;
 
 import com.MedicalClinic.LifeCare.security.jwt.CorsFilter;
 import com.MedicalClinic.LifeCare.security.services.UserDetailsServiceImpl;
-import jakarta.servlet.Filter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,6 +21,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import com.MedicalClinic.LifeCare.security.jwt.AuthEntryPointJwt;
 import com.MedicalClinic.LifeCare.security.jwt.AuthTokenFilter;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Configuration
 @EnableMethodSecurity
@@ -83,12 +83,13 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
 //    http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 //  }
   @Autowired
-  private CorsFilter corsFilter;
+  CorsFilter corsFilter;
 
   @Bean
   public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
     http.addFilterBefore(corsFilter, UsernamePasswordAuthenticationFilter.class);
-    http.csrf(csrf -> csrf.disable())
+    http.cors(cors -> cors.disable())
+        .csrf(csrf -> csrf.disable())
         .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
         .authorizeHttpRequests(auth ->

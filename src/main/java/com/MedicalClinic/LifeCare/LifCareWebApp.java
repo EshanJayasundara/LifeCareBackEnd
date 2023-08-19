@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 public class LifCareWebApp {
 
 	public static void main(String[] args) {
-    SpringApplication.run(LifCareWebApp.class, args);
+		SpringApplication.run(LifCareWebApp.class, args);
 	}
 
 }
