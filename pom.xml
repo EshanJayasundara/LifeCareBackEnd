@@ -9,7 +9,7 @@
 		<version>3.1.0</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bezkoder</groupId>
+	<groupId>com.LifeCare</groupId>
 	<artifactId>back-end</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-security-jwt</name>
@@ -82,12 +82,6 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>entity</groupId>
-			<artifactId>entity-txn</artifactId>
-			<version>0.1.5</version>
-    	</dependency>
 	</dependencies>
 
 	<build>
